@@ -72,7 +72,7 @@ const PoolsContent = () => {
   ];
 
   return (
-    <div className="p-2 sm:p-4">
+    <div className="p-2 sm:p-4 font-montserrat">
       {/* Top Metrics */}
       <div className="flex flex-col md:flex-row gap-2 mb-4">
         {stock.map((item) => (
@@ -85,9 +85,12 @@ const PoolsContent = () => {
         {/* Table Header */}
         <div className="grid grid-cols-4 xl:grid-cols-8 gap-2 p-2 sm:p-4 text-gray-400 text-xs sm:text-sm font-medium uppercase tracking-wider">
           <div className="col-span-2"></div>
-          <div className="col-span-1">vAPY</div>
-          <div className="col-span-1">TVL</div>
-          <div className="hidden md:block col-span-1">Capital</div>
+<div className="col-span-1 flex justify-end">
+  <span>vAPY</span>
+</div>
+<div className="col-span-1 flex justify-end">
+  <span>TVL</span>
+</div>          <div className="hidden md:block col-span-1">Capital</div>
           <div className="hidden md:block col-span-1">Rewards</div>
           <div className="hidden xl:block col-span-2"></div>{" "}
           {/* Placeholder for buttons on xl */}
@@ -97,33 +100,33 @@ const PoolsContent = () => {
         {poolsData.map((pool) => (
           <div
             key={pool.id}
-            className="bg-[#090809] my-2 grid grid-cols-4 xl:grid-cols-8 gap-2 p-2 items-center hover:bg-gray-800/30 transition-colors md:p-[20px_30px] rounded-lg"
+            className="bg-[#090809] my-2 grid grid-cols-5 xl:grid-cols-8 gap-2 p-2 items-center hover:bg-gray-800/30 transition-colors md:p-[20px_30px] rounded-lg"
           >
             {/* Pool Name & Icon */}
-            <div className="col-span-2 flex items-center gap-4 md:gap-6">
+            <div className="col-span-3 flex items-center gap-4 md:gap-6">
               <div className="relative w-20 sm:w-24 h-8 sm:h-10">
-                <div className="absolute w-8 h-8  rounded-full border-2 border-gray-700 bg-white left-0 z-10">
+                <div className="absolute w-7 h-7  rounded-full border-2 border-gray-700 bg-white left-0 z-10">
                   <img
                     src={pool.im1}
                     alt="Icon 1"
                     className="w-full h-full rounded-full object-cover"
                   />
                 </div>
-                <div className="absolute w-8 h-8  rounded-full border-2 border-gray-700 bg-white left-2 sm:left-4 z-20">
+                <div className="absolute w-7 h-7  rounded-full border-2 border-gray-700 bg-white left-2 sm:left-4 z-20">
                   <img
                     src={pool.im2}
                     alt="Icon 2"
                     className="w-full h-full rounded-full object-cover"
                   />
                 </div>
-                <div className="absolute w-8 h-8  rounded-full border-2 border-gray-700 bg-white left-8 sm:left-8 z-30">
+                <div className="absolute w-7 h-7  rounded-full border-2 border-gray-700 bg-white left-8 sm:left-8 z-30">
                   <img
                     src={pool.im3}
                     alt="Icon 3"
                     className="w-full h-full rounded-full object-cover"
                   />
                 </div>
-                <div className="absolute w-8 h-8  rounded-full border-2 border-gray-700 bg-white left-12 sm:left-15 z-40">
+                <div className="absolute w-7 h-7  rounded-full border-2 border-gray-700 bg-white left-12 sm:left-15 z-40">
                   <img
                     src={pool.im4}
                     alt="Icon 4"
@@ -131,7 +134,7 @@ const PoolsContent = () => {
                   />
                 </div>
               </div>
-              <span className="text-white text-sm sm:text-base font-medium">
+              <span className="text-white text-[12px] sm:text-[13px] font-semibold">
                 {pool.name}
               </span>
             </div>
@@ -149,7 +152,8 @@ const PoolsContent = () => {
                 {pool.tvl}
               </span>
             </div>
-
+            <div>
+            </div>
             {/* Capital (visible on all screens) */}
             <div className="col-span-1 flex items-center">
               <span className="text-white text-sm sm:text-base">

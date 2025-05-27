@@ -19,7 +19,7 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
   };
 
   return (
-    <aside className={`fixed top-0 left-0 min-h-screen my-16 lg:my-0 w-[300px] bg-black font-montserrat transform transition-transform duration-300 z-50 
+    <aside className={`fixed top-0 left-0 min-h-screen my-16 lg:my-0 w-full lg:w-[300px] bg-black font-montserrat transform transition-transform duration-300 z-50 
       ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 md:static md:block`}>
        
       <nav className="space-y-2 ">
