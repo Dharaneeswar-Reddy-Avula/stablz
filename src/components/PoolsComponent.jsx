@@ -97,7 +97,7 @@ const PoolsContent = () => {
         {poolsData.map((pool) => (
           <div
             key={pool.id}
-            className="bg-[#090809] my-2 grid grid-cols-5 xl:grid-cols-8 gap-2 p-2 items-center hover:bg-gray-800/30 transition-colors md:p-[20px_30px] rounded-lg"
+            className="bg-[#090809] my-2 grid  xl:grid-cols-8 gap-2 p-2 items-center hover:bg-gray-800/30 transition-colors md:p-[20px_30px] rounded-lg"
           >
             {/* Pool Name & Icon */}
             <div className="col-span-2 flex items-center gap-4 md:gap-6">
